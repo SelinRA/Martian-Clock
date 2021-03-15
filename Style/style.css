@@ -1,0 +1,147 @@
+/*De cycle achtergrondjes*/
+
+.dawn {
+    background-image: url("../Images/dawnbg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
+}
+
+.day {
+    background-image: url("../Images/daybg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
+}
+
+.dusk {
+    background-image: url("../Images/duskbg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
+}
+
+.night {
+    background-image: url("../Images/nightbg.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center; 
+    background-size: cover;
+}
+    
+
+.header {
+    grid-area: header;
+}
+
+.logo {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 50%;
+}
+
+.time {
+    grid-area: time;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: verdana;
+    color: white;
+    font-size: 40px;
+}
+
+.date {
+    grid-area: date;
+    text-align: center;
+    font-family: verdana;
+    color: white;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*De media queries veranderen de grootte van het logo, het font van de klok en het font van de datum. 
+Voor mijn gevoel was het niet nodig om het grid anders in te delen op andere schermbreedtes, want ik vond hem zo wel mooi */
+
+@media only screen and (min-width:320px){
+    .container{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.2fr 1fr 1fr;
+        grid-template-areas: 
+        "header"
+        "time"
+        "date"
+        ;
+        grid-gap: 5px;
+    }
+}
+
+@media only screen and (min-width:400px) {
+    .time {
+        font-size: 50px;
+    }
+
+    .date {
+        font-size: 25px;
+    }
+}
+
+@media only screen and (min-width:600px){
+
+    .logo {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 40%;
+    }
+
+    .time {
+        font-size: 80px;
+    }
+
+    .date {
+        font-size: 40px;
+    }
+
+}
+
+@media only screen and (min-width:1000px){
+
+    .logo {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 30%;
+    }
+
+    .time {
+        font-size: 130px;
+    }
+
+    .date {
+        font-size: 70px;
+    }
+
+}
+
+@media only screen and (min-width:1300px){
+
+    .logo {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 25%;
+    }
+
+    .time {
+        font-size: 140px;
+    }
+
+    .date {
+        font-size: 80px;
+    }
+
+}
